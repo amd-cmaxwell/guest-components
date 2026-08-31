@@ -1,4 +1,4 @@
-// Copyright (c) 2026 AMD
+// Copyright (c) 2026 Advanced Micro Devices
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -25,9 +25,9 @@ impl VMPrivilegeLevel {
     pub const LEAST_PRIVILEGED: Self = Self::Three;
 
     /// MIN returns the lowest VMPL ring (the highest privilege level)
-    pub const MIN: Self = Self::MOST_PRIVILEGED;
+    pub const INT_MIN: Self = Self::MOST_PRIVILEGED;
     /// MAX returns the highest VMPL ring (the least privilege level)
-    pub const MAX: Self = Self::LEAST_PRIVILEGED;
+    pub const INT_MAX: Self = Self::LEAST_PRIVILEGED;
 }
 
 impl TryFrom<u8> for VMPrivilegeLevel {

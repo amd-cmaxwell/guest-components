@@ -280,7 +280,7 @@ impl TsmReportPath {
                 Err(privfloor_err) => return privfloor_err,
             };
 
-            let valid_range = privlevel_floor..=VMPrivilegeLevel::MAX;
+            let valid_range = privlevel_floor..=VMPrivilegeLevel::INT_MAX;
             trace!("Extracted privlevel_floor: {privlevel_floor}. Checking if privlevel {privlevel} is within bounds ({valid_range:?})...");
 
             if valid_range.contains(&privlevel) {
