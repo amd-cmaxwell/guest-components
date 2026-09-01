@@ -17,9 +17,9 @@ use std::path::Path;
 use tracing::{debug, error, trace, warn};
 
 mod hostdata;
-pub mod vpml;
+pub mod vmpl;
 
-pub use vpml::VMPrivilegeLevel;
+pub use vmpl::VMPrivilegeLevel;
 
 const SEV_GUEST_FALLBACK_DEVICE: &str = "/sys/devices/platform/sev-guest";
 
